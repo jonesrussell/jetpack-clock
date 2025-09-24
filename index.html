@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jetpack Clock - World Time Zones</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Ensure full screen on all devices */
+    html, body {
+      height: 100vh;
+      height: 100dvh; /* Dynamic viewport height for mobile */
+      overflow: hidden;
+    }
+    
+    /* Kiosk mode optimizations */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white font-mono">
+  <!-- Header -->
+  <header class="absolute top-0 left-0 right-0 z-10 p-6">
+    <div class="flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Jetpack Clock
+        </h1>
+        <p class="text-slate-400 mt-2">Remote Team Time Zones</p>
+      </div>
+      <div class="text-right">
+        <div id="current-date" class="text-2xl font-semibold"></div>
+        <div id="current-time" class="text-lg text-slate-400"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Clock Grid -->
+  <main class="flex items-center justify-center min-h-screen p-8">
+    <div id="clock-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 w-full max-w-7xl">
+      <!-- Clocks will be dynamically inserted here -->
+    </div>
+  </main>
+
+  <!-- Meeting Alert Banner -->
+  <div id="meeting-alert" class="hidden fixed top-20 left-1/2 transform -translate-x-1/2 z-20 bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-full shadow-2xl animate-pulse-slow">
+    <div class="flex items-center space-x-4">
+      <div class="text-2xl">🚨</div>
+      <div>
+        <div class="font-bold text-lg">Standup Meeting Starting!</div>
+        <div class="text-sm opacity-90">10:00 AM PST - Vancouver</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="absolute bottom-0 left-0 right-0 p-6">
+    <div class="flex justify-center items-center space-x-8 text-slate-500">
+      <div class="flex items-center space-x-2">
+        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+        <span>Live</span>
+      </div>
+      <div>Auto-refresh every second</div>
+      <div id="connection-status" class="flex items-center space-x-2">
+        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+        <span>Connected</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/app.js"></script>
+</body>
+</html>
