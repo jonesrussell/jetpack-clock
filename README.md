@@ -9,7 +9,9 @@ A full-screen, kiosk-style world clock application designed for remote teams. Pe
   - 🌲 Vancouver (PST) - Company headquarters  
   - 🏔️ Alberta (MST)
   - 🌺 Hawaii (HST)
-  - 🦁 Singapore (SGT)
+  - 🦁 Sri Lanka (IST)
+  - 🇬🇧 United Kingdom (GMT)
+  - 🇵🇭 Philippines (PHT)
 
 - **Meeting alerts** - Visual indicators when it's meeting time (10am PST daily standup)
 - **Modern design** - Built with Tailwind CSS for a sleek, professional look

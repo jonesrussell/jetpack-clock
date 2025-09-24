@@ -38,12 +38,28 @@ class WorldClock {
         emoji: '🌺'
       },
       {
-        id: 'singapore',
-        city: 'Singapore',
-        timezone: 'Asia/Singapore',
-        abbreviation: 'SGT',
-        offset: '+08:00',
+        id: 'sri-lanka',
+        city: 'Sri Lanka',
+        timezone: 'Asia/Colombo',
+        abbreviation: 'IST',
+        offset: '+05:30',
         emoji: '🦁'
+      },
+      {
+        id: 'uk',
+        city: 'United Kingdom',
+        timezone: 'Europe/London',
+        abbreviation: 'GMT',
+        offset: '+00:00',
+        emoji: '🇬🇧'
+      },
+      {
+        id: 'philippines',
+        city: 'Philippines',
+        timezone: 'Asia/Manila',
+        abbreviation: 'PHT',
+        offset: '+08:00',
+        emoji: '🇵🇭'
       }
     ];
 
